@@ -44,21 +44,13 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var appStart, genericError;
+	console.log('Wow! Such Front!');
 	
-	console.log('Hej!');
-	
-	appStart = function() {
-	  console.log('Wow! Such Tic! Much Tail!');
-	};
-	
-	genericError = function() {
-	  console.error('Something went wrong');
-	};
-	
-	TT["native"].init().done(appStart).fail(genericError);
+	Mousetrap.bind('d o g e', function() {
+	  return console.log('Wow!');
+	});
 
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=bundle.js.map
+//# sourceMappingURL=client.js.map

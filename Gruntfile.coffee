@@ -26,10 +26,13 @@ module.exports = (grunt) ->
           ]
         devtool: 'source-map'
       main:
-        entry: './src/app.coffee'
+        entry: {
+          app: './src/app.coffee'
+          client: './src/client.coffee'
+        }
         output:
           path: 'dist/<%= relativePath %>/'
-          filename: 'bundle.js'
+          filename: '[name].js'
       dist:
         plugins: [
           new webpack.optimize.UglifyJsPlugin(mangle: false)
